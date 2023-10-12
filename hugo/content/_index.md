@@ -1,5 +1,5 @@
 ---
-title: "DevOps Demo"
+title: "DevOps Workshop"
 chapter: true
 weight: 1
 ---
@@ -8,9 +8,9 @@ weight: 1
 
 # DevOps Demo
 
-Welcome to DevOps Demo!
+Welcome to DevOps Workshop!
 
-This is just to showcase a basic demonstration for potential clients.
+A basic workshop that aims audience to automate certain things.
 
 
 Feel free to shared your feedback!
