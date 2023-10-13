@@ -1,9 +1,13 @@
-# demo
+# DevOps Workshop
 
 
-[https://demo.redopsbay.dev](https://demo.redopsbay.dev)
+[https://devops.redopsbay.dev](https://devops.redopsbay.dev)
 
 Curated list of demo for cloud-native solutions. 👌
+
+Aiming developers or who wants to start their career as a devops engineer or just enthusiast automating things. 😎
+
+***Knowledge is free!!! You just have to work for it!***
 
 # Hugo Development 🚧 ##
 
@@ -23,36 +27,23 @@ popd
 ```
 
 
-### Starting hugo server
+### Starting hugo server for development
 ```bash
-pushd hugo
-docker run --rm -it \
-    -v "$(pwd)":/src \
-    -p 1313:1313 \
-    klakegg/hugo:0.107.0-ext-ubuntu \
-  server --disableFastRender --navigateToChanged
-
-popd
+make start-dev
 ```
 
 
 ### Compiling the hugo site
 ```bash
-docker run --rm -it \
-    -v $(pwd):/src \
-    klakegg/hugo:0.107.0-ext-ubuntu \
-    --gc \
-    --minify \
-    --baseURL "https://demo.redopsbay.dev"
+make build
 ```
 
-### Running the static site
+### Running the static site w/ nginx
 ```bash
-pushd public/
-docker run --rm \
-    -it \
-    -p 8080:80 \
-    --name nginx-server \
-    -v $(pwd):/usr/share/nginx/html nginx:1.23.4
-popd
+make start-nginx
 ```
+
+
+## Contributors 🚧
+
+[![contributors](https://contrib.rocks/image?repo=redopsbay/devops)](https://github.com/redopsbay/devops/graphs/contributors)

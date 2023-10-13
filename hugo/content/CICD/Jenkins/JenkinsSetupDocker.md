@@ -1,7 +1,7 @@
 ---
 title: "Jenkins Setup Docker Compose"
 chapter: false
-weight: 2
+weight: 3
 ---
 
 ![DevOps](https://www.jenkins.io/images/logos/actor/256.png)

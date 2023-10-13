@@ -1,10 +1,10 @@
-baseURL = 'https://demo.redopsbay.dev'
+baseURL = 'https://devops.redopsbay.dev'
 languageCode = 'en-us'
-title = 'DevOps Demo'
+title = 'DevOps Workshop'
 theme = 'hugo-theme-learn'
 
 [params]
-  #editURL = ""
+  editURL = "https://github.com/redopsbay/devops/tree/dev/hugo/content/"
   # Author of the site, will be used in meta information
   author = "Alfred Valderrama"
   # Description of the site, will be used in meta information
