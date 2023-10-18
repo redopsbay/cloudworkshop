@@ -16,7 +16,7 @@ Aiming developers or who wants to start their career as a devops engineer or jus
 ```bash
 docker run --rm -it \
     -v "$(pwd)":/src \
-    klakegg/hugo:0.107.0-ext-ubuntu new site hugo
+    klakegg/hugo:0.111.3-ext-ubuntu-onbuild new site hugo
 ```
 ### Downloading the theme
 ```bash
