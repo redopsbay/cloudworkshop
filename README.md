@@ -21,11 +21,9 @@ docker run --rm -it \
 ### Downloading the theme
 
 ```bash
-pushd hugo
 git submodule add https://github.com/matcornic/hugo-theme-learn themes/hugo-theme-learn
 echo "theme = 'hugo-theme-learn'" >> config.toml
-popd
-```
+s```
 
 ### Starting hugo server for development
 
