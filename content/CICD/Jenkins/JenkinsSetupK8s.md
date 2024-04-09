@@ -8,13 +8,13 @@ weight: 3
 
 ## Jenkins Up & Running on K8s 🚀
 
-For local development, we can use jenkins thru `kubernetes` to simplify things or to replicate your existing environment such as `kubernetes`.
+For quick deployment, we can deploy jenkins server thru `kubernetes` cluster.
 
-We will use the latest jenkins-controller `jenkins/jenkins:lts` lts image version.
+We will use the latest jenkins-controller `jenkins/jenkins:lts` as lts image version.
 
-**_Note: Do not use in production_**
+**Note: Do not use in production**
 
-1. let's create a `namespace.yaml` file:
+1. Let's create a `namespace.yaml` file:
 
 ```yaml
 apiVersion: v1

@@ -13,8 +13,52 @@ theme = 'hugo-theme-learn'
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false
+  themeVariant = "mine"
+  ordersectionsby = "weight"
+  disableSearch = false
+
 
 [[menu.shortcuts]]
 name = "<i class='fas fa-tags'></i> Tags"
 url = "/tags"
 weight = 30
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-tools'></i> CNCF LandScape"
+url = "https://landscape.cncf.io/"
+weight = 1
+
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-chalkboard-teacher'></i> Official GitHub Repository"
+url = "https://github.com/redopsbay/devops"
+weight = 2
+
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-chalkboard-teacher'></i> Author Site"
+url = "https://redopsbay.dev"
+weight = 3
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-lightbulb'></i> Amazon Web Services"
+url = "https://aws.amazon.com/"
+weight = 4
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-lightbulb'></i> Google Cloud Platform"
+url = "https://cloud.google.com/"
+weight = 5
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-lightbulb'></i> Azure"
+url = "https://azure.com/"
+weight = 6
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-lightbulb'></i> Digital Ocean"
+url = "https://digitalocean.com/"
+weight = 7

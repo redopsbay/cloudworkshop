@@ -23,7 +23,7 @@ docker run --rm -it \
 ```bash
 git submodule add https://github.com/matcornic/hugo-theme-learn themes/hugo-theme-learn
 echo "theme = 'hugo-theme-learn'" >> config.toml
-s```
+```
 
 ### Starting hugo server for development
 

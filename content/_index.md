@@ -1,17 +1,19 @@
 ---
 title: "DevOps Workshop"
-chapter: true
+chapter: false
 weight: 1
 ---
 
 ![DevOps](/images/devops.png?width=20pc)
 
-# DevOps Demo
+# DevOps Workshops
 
-Welcome to DevOps Workshop!
+---
 
-A basic workshop that aims audience to automate certain things.
+Welcome to DevOps Workshops!
 
-Feel free to shared your feedback!
+A basic workshop that provides solutions in a real-world scenario's. Feel free to share your feedback!
 
-#### Note: Demonstrations are not built in chronological order. The solutions are experience-based and widely available.
+<b>Give us a star: [GitHub Official Repository](https://github.com/redopsbay/devops)</b>
+
+***Note:*** <i>Demonstrations are not built in chronological order. The solutions are experience-based and widely available.</i>
