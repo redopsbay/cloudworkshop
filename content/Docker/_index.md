@@ -1,7 +1,7 @@
 ---
 title: "Docker"
 chapter: true
-weight: 1
+weight: 2
 ---
 
 ![DevOps](/images/devops.png?width=20pc)

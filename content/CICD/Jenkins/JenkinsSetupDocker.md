@@ -6,15 +6,21 @@ weight: 3
 
 ![DevOps](https://www.jenkins.io/images/logos/actor/256.png)
 
-## Jenkins Up & Running on Docker Compose 🚀
+## Firing up Jenkins thru Docker Compose 🚀
 
-For local development, we can use jenkins thru `docker-compose` to simplify things.
+For local development, we can use jenkins thru `docker-compose` to quickly fire up our Jenkins Server.
 
-We will use the latest `nginx:alpine` and `jenkins/jenkins:lts` lts image version.
+Will use the latest `nginx:alpine` and `jenkins/jenkins:lts` lts image as it's latest version.
 
-In real world, you cannot use jenkins without a reverse proxy, but it doesn't mean that it would not work. But it will leave your jenkins server **VULNERABLE**.
+In real world, it is not recommended to run jenkins without a reverse proxy due to the limitations of it's web server configuration, but it doesn't mean that it would not work. But it will leave your jenkins server **VULNERABLE** and prone to error.
 
-1.  let's create a `docker-compose.yaml` file:
+### Pre-requisites
+
+- [x] Docker Installed
+- [x] Docker Compose Binary
+
+
+1. Let's create a `docker-compose.yaml` file:
 
 ```yaml
 ---
@@ -141,7 +147,7 @@ docker-compose up
 
 ![Jenkins Server](/images/jenkins-server-up-and-running-on-docker-compose.png?width=150pc)
 
-### Nicely done 😉 !
+***Nicely done 😉 !***
 
 ### Source Code
 
