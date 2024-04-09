@@ -1,8 +1,8 @@
-<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.111.3"><meta name=description content="Basic DevOps automation demonstration"><meta name=author content="Alfred Valderrama"><link rel=icon href=/images/favicon.png type=image/png><title>Jenkins Setup on Kubernetes - DevOps Workshop</title><link href=/css/nucleus.css?1712678739 rel=stylesheet><link href=/css/fontawesome-all.min.css?1712678739 rel=stylesheet><link href=/css/hybrid.css?1712678739 rel=stylesheet><link href=/css/featherlight.min.css?1712678739 rel=stylesheet><link href=/css/perfect-scrollbar.min.css?1712678739 rel=stylesheet><link href=/css/auto-complete.css?1712678739 rel=stylesheet><link href=/css/atom-one-dark-reasonable.css?1712678739 rel=stylesheet><link href=/css/theme.css?1712678739 rel=stylesheet><link href=/css/tabs.css?1712678739 rel=stylesheet><link href=/css/hugo-theme.css?1712678739 rel=stylesheet><link href=/css/theme-mine.css?1712678739 rel=stylesheet><script src=/js/jquery-3.3.1.min.js?1712678739></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/cicd/jenkins/jenkinssetupk8s/><nav id=sidebar class=showVisitedLinks><div id=header-wrapper><div id=header><a id=logo href=/><img src=/images/devops.png width=150 height=120 alt=devops><br><b>DevOps Workshop</b></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label>
+<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.111.3"><meta name=description content="Basic DevOps automation demonstration"><meta name=author content="Alfred Valderrama"><link rel=icon href=/images/favicon.png type=image/png><title>Jenkins Setup on Kubernetes - DevOps Workshop</title><link href=/css/nucleus.css?1712679422 rel=stylesheet><link href=/css/fontawesome-all.min.css?1712679422 rel=stylesheet><link href=/css/hybrid.css?1712679422 rel=stylesheet><link href=/css/featherlight.min.css?1712679422 rel=stylesheet><link href=/css/perfect-scrollbar.min.css?1712679422 rel=stylesheet><link href=/css/auto-complete.css?1712679422 rel=stylesheet><link href=/css/atom-one-dark-reasonable.css?1712679422 rel=stylesheet><link href=/css/theme.css?1712679422 rel=stylesheet><link href=/css/tabs.css?1712679422 rel=stylesheet><link href=/css/hugo-theme.css?1712679422 rel=stylesheet><link href=/css/theme-mine.css?1712679422 rel=stylesheet><script src=/js/jquery-3.3.1.min.js?1712679422></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/cicd/jenkins/jenkinssetupk8s/><nav id=sidebar class=showVisitedLinks><div id=header-wrapper><div id=header><a id=logo href=/><img src=/images/devops.png width=150 height=120 alt=devops><br><b>DevOps Workshop</b></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label>
 <input data-search-input id=search-by type=search placeholder=Search...>
-<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=/js/lunr.min.js?1712678739></script>
-<script type=text/javascript src=/js/auto-complete.js?1712678739></script>
-<script type=text/javascript>var baseurl="https://devops.redopsbay.dev"</script><script type=text/javascript src=/js/search.js?1712678739></script></div><section id=homelinks><ul><li><a class=padding href=/><i class='fas fa-home'></i> Home</a></li></ul></section><div class=highlightable><ul class=topics><li data-nav-id=/about/ title="About Workshop" class=dd-item><a href=/about/>About Workshop
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=/js/lunr.min.js?1712679422></script>
+<script type=text/javascript src=/js/auto-complete.js?1712679422></script>
+<script type=text/javascript>var baseurl="https://devops.redopsbay.dev"</script><script type=text/javascript src=/js/search.js?1712679422></script></div><section id=homelinks><ul><li><a class=padding href=/><i class='fas fa-home'></i> Home</a></li></ul></section><div class=highlightable><ul class=topics><li data-nav-id=/about/ title="About Workshop" class=dd-item><a href=/about/>About Workshop
 <i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/about/contributors/ title=Contributors class=dd-item><a href=/about/contributors/>Contributors
 <i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/about/quick-intro-01/ title="Quick Introduction To DevOps" class=dd-item><a href=/about/quick-intro-01/>Quick Introduction To DevOps
 <i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/configuration-management/ title="Configuration Management" class=dd-item><a href=/configuration-management/>Configuration Management
@@ -58,14 +58,14 @@ parent"><a href=/cicd/jenkins/>Jenkins
 </span></span><span style=display:flex><span>    <span style=color:#f92672>name</span>: <span style=color:#ae81ff>jenkins-admin</span>
 </span></span><span style=display:flex><span>    <span style=color:#f92672>namespace</span>: <span style=color:#ae81ff>jenkins-controller</span>
 </span></span></code></pre></div><footer class=footline></footer></div></div><div id=navigation><a class="nav nav-prev" href=/cicd/jenkins/jenkinssetupdocker/ title="Jenkins Setup Docker Compose"><i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=/docker/ title=Docker style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/js/clipboard.min.js?1712678739></script>
-<script src=/js/perfect-scrollbar.min.js?1712678739></script>
-<script src=/js/perfect-scrollbar.jquery.min.js?1712678739></script>
-<script src=/js/jquery.sticky.js?1712678739></script>
-<script src=/js/featherlight.min.js?1712678739></script>
-<script src=/js/highlight.pack.js?1712678739></script>
-<script>hljs.initHighlightingOnLoad()</script><script src=/js/modernizr.custom-3.6.0.js?1712678739></script>
-<script src=/js/learn.js?1712678739></script>
-<script src=/js/hugo-learn.js?1712678739></script>
-<script src=/mermaid/mermaid.js?1712678739></script>
+<a class="nav nav-next" href=/docker/ title=Docker style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/js/clipboard.min.js?1712679422></script>
+<script src=/js/perfect-scrollbar.min.js?1712679422></script>
+<script src=/js/perfect-scrollbar.jquery.min.js?1712679422></script>
+<script src=/js/jquery.sticky.js?1712679422></script>
+<script src=/js/featherlight.min.js?1712679422></script>
+<script src=/js/highlight.pack.js?1712679422></script>
+<script>hljs.initHighlightingOnLoad()</script><script src=/js/modernizr.custom-3.6.0.js?1712679422></script>
+<script src=/js/learn.js?1712679422></script>
+<script src=/js/hugo-learn.js?1712679422></script>
+<script src=/mermaid/mermaid.js?1712679422></script>
 <script>mermaid.initialize({startOnLoad:!0})</script></body></html>
