@@ -1,0 +1,20 @@
+baseURL = 'https://devops.redopsbay.dev'
+languageCode = 'en-us'
+title = 'DevOps Workshop'
+theme = 'hugo-theme-learn'
+
+[params]
+  editURL = "https://github.com/redopsbay/demo/tree/dev/hugo/content/"
+  # Author of the site, will be used in meta information
+  author = "Alfred Valderrama"
+  # Description of the site, will be used in meta information
+  description = "Basic DevOps automation demonstration"
+  titleSeparator = "-"
+  showVisitedLinks = true
+  disableBreadcrumb = false
+  disableNextPrev = false
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-tags'></i> Tags"
+url = "/tags"
+weight = 30
