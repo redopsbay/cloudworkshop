@@ -24,3 +24,10 @@ start-nginx:
 		-p 8080:80 \
 		--name nginx-server \
 		-v "$(CURRENT_DIR)/public":/usr/share/nginx/html nginx:alpine
+
+minify:
+	docker run --rm -it \
+			-v "$(CURRENT_DIR)":/src \
+			-p 1313:1313 \
+			klakegg/hugo:0.111.3-ext-ubuntu \
+			--minify
