@@ -4,7 +4,7 @@ title = 'DevOps Workshop'
 theme = 'hugo-theme-learn'
 
 [params]
-  editURL = "https://github.com/redopsbay/devops/tree/dev/hugo/content/"
+  editURL = "https://github.com/redopsbay/devops/tree/master/content/"
   # Author of the site, will be used in meta information
   author = "Alfred Valderrama"
   # Description of the site, will be used in meta information
