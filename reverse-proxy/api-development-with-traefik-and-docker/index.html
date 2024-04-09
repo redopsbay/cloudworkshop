@@ -1,0 +1,101 @@
+<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.111.3"><meta name=description content="Basic DevOps automation demonstration"><meta name=author content="Alfred Valderrama"><link rel=icon href=/images/favicon.png type=image/png><title>API development with traefik & docker - DevOps Workshop</title><link href=/css/nucleus.css?1712651401 rel=stylesheet><link href=/css/fontawesome-all.min.css?1712651401 rel=stylesheet><link href=/css/hybrid.css?1712651401 rel=stylesheet><link href=/css/featherlight.min.css?1712651401 rel=stylesheet><link href=/css/perfect-scrollbar.min.css?1712651401 rel=stylesheet><link href=/css/auto-complete.css?1712651401 rel=stylesheet><link href=/css/atom-one-dark-reasonable.css?1712651401 rel=stylesheet><link href=/css/theme.css?1712651401 rel=stylesheet><link href=/css/tabs.css?1712651401 rel=stylesheet><link href=/css/hugo-theme.css?1712651401 rel=stylesheet><script src=/js/jquery-3.3.1.min.js?1712651401></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/reverse-proxy/api-development-with-traefik-and-docker/><nav id=sidebar class=showVisitedLinks><div id=header-wrapper><div id=header><a id=logo href=/><img src=/images/devops.png width=150 height=120 alt=devops><br><b>DevOps Workshop</b></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label>
+<input data-search-input id=search-by type=search placeholder=Search...>
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=/js/lunr.min.js?1712651401></script>
+<script type=text/javascript src=/js/auto-complete.js?1712651401></script>
+<script type=text/javascript>var baseurl="https://devops.redopsbay.dev"</script><script type=text/javascript src=/js/search.js?1712651401></script></div><section id=homelinks><ul><li><a class=padding href=/><i class='fas fa-home'></i> Home</a></li></ul></section><div class=highlightable><ul class=topics><li data-nav-id=/about/ title="About Workshop" class=dd-item><a href=/about/>About Workshop
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/about/contributors/ title=Contributors class=dd-item><a href=/about/contributors/>Contributors
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/configuration-management/ title="Configuration Management" class=dd-item><a href=/configuration-management/>Configuration Management
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/configuration-management/ansible/ title=Ansible class=dd-item><a href=/configuration-management/ansible/>Ansible
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/cicd/ title="Continuous Integration and Continuous Delivery" class=dd-item><a href=/cicd/>Continuous Integration and Continuous Delivery
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/cicd/jenkins/ title=Jenkins class=dd-item><a href=/cicd/jenkins/>Jenkins
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/cicd/jenkins/introductiontojenkins/ title="Introduction to Jenkins" class=dd-item><a href=/cicd/jenkins/introductiontojenkins/>Introduction to Jenkins
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/cicd/jenkins/jenkinssetupdocker/ title="Jenkins Setup Docker Compose" class=dd-item><a href=/cicd/jenkins/jenkinssetupdocker/>Jenkins Setup Docker Compose
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/cicd/jenkins/jenkinssetupk8s/ title="Jenkins Setup on Kubernetes" class=dd-item><a href=/cicd/jenkins/jenkinssetupk8s/>Jenkins Setup on Kubernetes
+<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li><li data-nav-id=/docker/ title=Docker class=dd-item><a href=/docker/>Docker
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/git/ title=Git class=dd-item><a href=/git/>Git
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/iac/ title=IaC class=dd-item><a href=/iac/>IaC
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/kubernetes/ title=Kubernetes class=dd-item><a href=/kubernetes/>Kubernetes
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/observability/ title=Observability class=dd-item><a href=/observability/>Observability
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/quick-introduction-to-devops/ title="Quick Introduction To DevOps" class=dd-item><a href=/quick-introduction-to-devops/>Quick Introduction To DevOps
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/reverse-proxy/ title="Reverse Proxy" class="dd-item
+parent"><a href=/reverse-proxy/>Reverse Proxy
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/reverse-proxy/api-development-with-traefik-and-docker/ title="API development with traefik & docker" class="dd-item active"><a href=/reverse-proxy/api-development-with-traefik-and-docker/>API development with traefik & docker
+<i class="fas fa-check read-icon"></i></a></li></ul></li></ul><section id=shortcuts><h3>More</h3><ul><li><a class=padding href=https://devops.redopsbay.dev/tags><i class='fas fa-tags'></i> Tags</a></li></ul></section><section id=prefooter><hr><ul><li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Clear History</a></li></ul></section><section id=footer><p>Built with <a href=https://github.com/matcornic/hugo-theme-learn><i class="fas fa-heart"></i></a> from <a href=https://getgrav.org>Grav</a> and <a href=https://gohugo.io/>Hugo</a></p></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=top-github-link><a class=github-link title='Edit this page' href=https://github.com/redopsbay/devops/tree/dev/hugo/content/Reverse%20Proxy/api-development-with-traefik-and-docker.md target=blank><i class="fas fa-code-branch"></i>
+<span id=top-github-link-text>Edit this page</span></a></div><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i></a></span>
+<span id=toc-menu><i class="fas fa-list-alt"></i></span>
+<span class=links><a href=/>DevOps Workshop</a> > <a href=/reverse-proxy/>Reverse Proxy</a> > API development with traefik & docker
+          
+        
+     </span></div></div></div><div id=head-tags></div><div id=body-inner><h1>API development with traefik & docker</h1><p><img src="https://doc.traefik.io/traefik/assets/img/traefik-architecture.png?width=20pc" alt=DevOps></p><h2 id=the-problem->The Problem 🤯</h2><p>You have multiple docker or container services running on a single machine that uses same port during your development, and how will you run all this containers all at once without changing the port numbers?</p><p>Of course you can run it through docker using the parameters <code>-p 8080:8080</code> and <code>-p 9090:8080</code>.</p><p>But it&rsquo;s painful everytime you will run it since you will have to change each port on your <code>localhost</code>. This is what <code>traefik</code> proxy comes in.</p><h3 id=scenario->Scenario 😁</h3><p>For example, you have multiple docker services in your <code>docker-compose</code> file running multiple web applications or <strong>api endpoints</strong> and it&rsquo;s both designed to run on port <code>8080</code>.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#75715e># In my case, I will use my personal domain `redopsbay.dev`. If you don&#39;t have one.</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># you can always modify your `/etc/hosts` or `C:\Windows\System32\drivers\etc\hosts` file to add entries like:</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># /etc/hosts or C:\Windows\System32\drivers\etc\hosts</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 127.0.0.1 api.example.org</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>version</span>: <span style=color:#e6db74>&#34;3&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>services</span>:
+</span></span><span style=display:flex><span>  <span style=color:#75715e># Traefik proxy will be the frontend or edge router of your container services</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>traefik-proxy</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>traefik:v3.0</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>container_name</span>: <span style=color:#ae81ff>traefik-proxy</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>command</span>:
+</span></span><span style=display:flex><span>      - --<span style=color:#ae81ff>api.insecure=true</span>
+</span></span><span style=display:flex><span>      - --<span style=color:#ae81ff>providers.docker</span>
+</span></span><span style=display:flex><span>      - --<span style=color:#ae81ff>entrypoints.http.address=:80</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Expose port `80` on your machine</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>ports</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#e6db74>&#34;80:80&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>volumes</span>: <span style=color:#75715e># give traefik-proxy access into docker.sock</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>/var/run/docker.sock:/var/run/docker.sock</span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e># `user-api` running port `8080`</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>user-api</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>user-api:latest</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>build</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>context</span>: <span style=color:#ae81ff>user</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>dockerfile</span>: <span style=color:#ae81ff>Dockerfile</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>container_name</span>: <span style=color:#ae81ff>user-api</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>labels</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>traefik.enable=true</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>traefik.http.services.user-api.loadbalancer.server.port=8000</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>traefik.http.routers.user-api.rule=Host(`api.redopsbay.dev`) &amp;&amp; PathPrefix(`/user`)</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>traefik.http.routers.user-api.entrypoints=http</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>traefik.http.middlewares.user-api.stripprefix.prefixes=/user</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>traefik.http.routers.user-api.middlewares=user-api</span>
+</span></span><span style=display:flex><span>      <span style=color:#75715e># using `http` entrypoint that utilizes port `80`</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>ports</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>8000</span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e># `product-api` running port `80`</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>product-api</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>product-api:latest</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>build</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>context</span>: <span style=color:#ae81ff>product</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>dockerfile</span>: <span style=color:#ae81ff>Dockerfile</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>container_name</span>: <span style=color:#ae81ff>product-api</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>labels</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>traefik.enable=true</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>traefik.http.services.product-api.loadbalancer.server.port=8000</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>traefik.http.routers.product-api.rule=Host(`api.redopsbay.dev`) &amp;&amp; PathPrefix(`/product`)</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>traefik.http.routers.product-api.entrypoints=http</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>traefik.http.middlewares.product-api.stripprefix.prefixes=/product</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>traefik.http.routers.product-api.middlewares=product-api</span>
+</span></span><span style=display:flex><span>      <span style=color:#75715e># using `http` entrypoint also that utilizes port `80`</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>ports</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>8000</span>
+</span></span></code></pre></div><p>If you run and thru <code>docker-compose up</code>:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>docker-compose up
+</span></span></code></pre></div><p>If you visit the url in my case it&rsquo;s <code>http://api.redopsbay.dev/user/1</code> & <code>http://api.redopsbay.dev/product/3</code>, the response will be:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># http://api.redopsbay.dev/user/</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>{</span><span style=color:#e6db74>&#34;id&#34;</span>:1,<span style=color:#e6db74>&#34;username&#34;</span>:<span style=color:#e6db74>&#34;andres&#34;</span><span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># http://api.redopsbay.dev/product/</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>{</span><span style=color:#e6db74>&#34;id&#34;</span>:1,<span style=color:#e6db74>&#34;name&#34;</span>:<span style=color:#e6db74>&#34;testproduct&#34;</span><span style=color:#f92672>}</span>
+</span></span></code></pre></div><h3 id=thats-all->That&rsquo;s all!!! 👌</h3><p><strong><em>Note:</em></strong> Traefik does not tied up only to a api development. It has a lot of use cases like <code>middleware</code> and <code>edge routing</code> experience and it&rsquo;s pretty fast!!<ul class="children children-li"></ul></p><h3 id=references>References</h3><ul><li><a href=https://doc.traefik.io/traefik/>Traefik Offical Documentation</a></li></ul><h2 id=source-code>Source Code</h2><ul><li><a href=/src/reverse-proxy/traefik/api-development-with-traefik-and-docker.tar.gz>api-development-with-traefik-and-docker.tar.gz</a></li></ul><footer class=footline></footer></div></div><div id=navigation><a class="nav nav-prev" href=/reverse-proxy/ title="Reverse Proxy"><i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/about/ title="About Workshop" style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/js/clipboard.min.js?1712651401></script>
+<script src=/js/perfect-scrollbar.min.js?1712651401></script>
+<script src=/js/perfect-scrollbar.jquery.min.js?1712651401></script>
+<script src=/js/jquery.sticky.js?1712651401></script>
+<script src=/js/featherlight.min.js?1712651401></script>
+<script src=/js/highlight.pack.js?1712651401></script>
+<script>hljs.initHighlightingOnLoad()</script><script src=/js/modernizr.custom-3.6.0.js?1712651401></script>
+<script src=/js/learn.js?1712651401></script>
+<script src=/js/hugo-learn.js?1712651401></script>
+<script src=/mermaid/mermaid.js?1712651401></script>
+<script>mermaid.initialize({startOnLoad:!0})</script></body></html>
