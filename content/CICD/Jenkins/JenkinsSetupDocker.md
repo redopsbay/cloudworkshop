@@ -151,4 +151,4 @@ docker-compose up
 
 ### Source Code
 
-- [jenkins-setup-docker.tar.gz](/src/cicd/jenkins/jenkins-setup-docker.tar.gz)
+- [https://github.com/redopsbay/devops/tree/master/content/labs-src/jenkins-setup-docker](https://github.com/redopsbay/devops/tree/master/content/labs-src/jenkins-setup-docker)

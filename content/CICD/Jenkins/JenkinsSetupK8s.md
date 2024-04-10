@@ -61,3 +61,7 @@ subjects:
     name: jenkins-admin
     namespace: jenkins-controller
 ```
+
+### Source Code
+
+- [https://github.com/redopsbay/devops/tree/master/content/labs-src/jenkins-setup-k8s](https://github.com/redopsbay/devops/tree/master/content/labs-src/jenkins-setup-k8s)
