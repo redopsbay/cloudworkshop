@@ -103,4 +103,4 @@ If you visit the url in my case it's `http://api.redopsbay.dev/user/1` & `http:/
 
 ## Source Code
 
-- [https://github.com/redopsbay/devops/tree/master/content/lab-src/api-gateway-and-reverse-proxy](https://github.com/redopsbay/devops/tree/master/content/lab-src/api-gateway-and-reverse-proxy)
+- [https://github.com/redopsbay/devops/tree/master/lab-src/api-gateway-and-reverse-proxy/traefik/api-development-with-traefik-and-docker](https://github.com/redopsbay/devops/tree/master/lab-src/api-gateway-and-reverse-proxy/traefik/api-development-with-traefik-and-docker)
