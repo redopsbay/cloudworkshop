@@ -2,6 +2,7 @@ baseURL = 'https://devops.redopsbay.dev'
 languageCode = 'en-us'
 title = 'DevOps Workshop'
 theme = 'hugo-theme-learn'
+enableEmoji = true
 
 [params]
   editURL = "https://github.com/redopsbay/devops/tree/master/content/"
@@ -44,21 +45,21 @@ url = "https://redopsbay.dev"
 weight = 3
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-lightbulb'></i> Amazon Web Services"
+name = "<i class='fas fa-tools'></i> Amazon Web Services"
 url = "https://aws.amazon.com/"
 weight = 4
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-lightbulb'></i> Google Cloud Platform"
+name = "<i class='fas fa-tools'></i> Google Cloud Platform"
 url = "https://cloud.google.com/"
 weight = 5
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-lightbulb'></i> Azure"
+name = "<i class='fas fa-tools'></i> Azure"
 url = "https://azure.com/"
 weight = 6
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-lightbulb'></i> Digital Ocean"
+name = "<i class='fas fa-tools'></i> Digital Ocean"
 url = "https://digitalocean.com/"
 weight = 7
