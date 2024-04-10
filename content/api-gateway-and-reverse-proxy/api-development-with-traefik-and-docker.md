@@ -92,9 +92,9 @@ If you visit the url in my case it's `http://api.redopsbay.dev/user/1` & `http:/
 {"id":1,"name":"testproduct"}
 ```
 
-### That's all!!! 👌
+**That's it!!! 👌**
 
-**_Note:_** Traefik does not tied up only to a api development. It has a lot of use cases like `middleware` and `edge routing` experience and it's pretty fast!!
+***Note:*** Traefik does not tied up only to a api development. It has a lot of feature and use cases like `middleware` and `edge routing` experience and it's pretty fast!!
 {{% children showhidden="false" %}}
 
 ### References
@@ -103,4 +103,4 @@ If you visit the url in my case it's `http://api.redopsbay.dev/user/1` & `http:/
 
 ## Source Code
 
-- [api-development-with-traefik-and-docker.tar.gz](/src/reverse-proxy/traefik/api-development-with-traefik-and-docker.tar.gz)
+- [https://github.com/redopsbay/devops/tree/master/content/lab-src/api-gateway-and-reverse-proxy](https://github.com/redopsbay/devops/tree/master/content/lab-src/api-gateway-and-reverse-proxy)

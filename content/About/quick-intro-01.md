@@ -4,13 +4,13 @@ chapter: false
 weight: 2
 ---
 
-![DevOps](/images/devops.png?width=20pc)
-
----
-
 ### What is DevOps?
 
-> According to ***GitLab***, <i>"DevOps combines development (Dev) and operations (Ops) to increase the efficiency, speed, and security of software development and delivery compared to traditional processes. A more nimble software development lifecycle results in a competitive advantage for businesses and their customers"</i>
+{{% notice info %}}
+
+According to ***GitLab***, <i>"DevOps combines development (Dev) and operations (Ops) to increase the efficiency, speed, and security of software development and delivery compared to traditional processes. A more nimble software development lifecycle results in a competitive advantage for businesses and their customers"</i>
+
+{{% /notice %}}
 
 ### Common misconceptions about DevOps
 

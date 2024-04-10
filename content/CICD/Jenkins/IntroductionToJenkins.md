@@ -16,12 +16,10 @@ Jenkins can be installed through native system packages, `Docker`, or even run s
 
 It also allow you to automate your deployment starting from lower environment such as:
 
-- **dev**
-- **qa**
-- **staging**
-- **pre-prod**
-- **prod**
-- **etc**
+{{<mermaid align="center">}}
+graph LR;
+    A[DEV] --> B(QA) --> C[STAGING] --> D[PROD]
+{{< /mermaid >}}
 
 
 It allows you to define / create scripts by using <i>Groovy Scripts</i> to create logical workflow that you would use to automate your **build** / **testing** / **delivery** or **deployment**.
