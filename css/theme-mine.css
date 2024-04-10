@@ -28,6 +28,7 @@
 
 body {
     color: var(--MAIN-TEXT-color) !important;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, select[multiple=multiple]:focus {
@@ -143,7 +144,7 @@ div.notices p:first-child:before {
     position: absolute;
     top: 2px;
     color: #fff;
-    font-family: 'Font Awesome\ 5 Free';
+    font-family: Arial, Helvetica, sans-serif;
     content: #F06A;
     font-weight: 900; /* Fix version 5.0.9 */
     left: 10px;
