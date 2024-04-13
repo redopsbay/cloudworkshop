@@ -13,7 +13,7 @@ resource "aws_security_group" "jenkins_server" {
   ingress {
     from_port   = 80
     to_port     = 80
-    protocol    = -1
+    protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
     description = "allow http"
   }
@@ -21,7 +21,7 @@ resource "aws_security_group" "jenkins_server" {
   ingress {
     from_port   = 443
     to_port     = 443
-    protocol    = -1
+    protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
     description = "allow https"
   }
@@ -29,7 +29,7 @@ resource "aws_security_group" "jenkins_server" {
   ingress {
     from_port   = 2
     to_port     = 22
-    protocol    = -1
+    protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
 
@@ -50,9 +50,9 @@ resource "aws_security_group" "jenkins_slave" {
   vpc_id = local.vpc_id
 
   ingress {
-    from_port   = 2
+    from_port   = 22
     to_port     = 22
-    protocol    = -1
+    protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
 
