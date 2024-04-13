@@ -18,8 +18,7 @@ unzip terraform.zip && sudo install terraform /usr/local/bin/
 
 ### setup ansible default config
 
-sudo mkdir /etc/ansible
-sudo cat << _EOF > /etc/ansible/ansible.cfg
+cat << _EOF > ~/.ansible.cfg
 [default]
 host_key_checking = False
 _EOF
