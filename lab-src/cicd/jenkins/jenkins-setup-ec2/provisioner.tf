@@ -12,7 +12,7 @@ resource "null_resource" "ansible" {
 
   provisioner "local-exec" {
     command     = "sleep 150s && export ANSIBLE_HOST_KEY_CHECKING=False && ansible-playbook -i ${path.module}/inventory.ini ${path.module}/ansible-playbook/playbook.yaml -b -v"
-    interpreter = ["/bin/bash -c "]
+    interpreter = ["/bin/bash", "-c"]
   }
   depends_on = [
     aws_instance.jenkins_server,
