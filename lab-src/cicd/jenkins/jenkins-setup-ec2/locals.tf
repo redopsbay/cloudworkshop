@@ -15,4 +15,5 @@ locals {
     Provisioner  = "Terraform"
     ConfiguredBy = "Ansible"
   }
+  ansible_inventory_file = "${path.module}/inventory.ini"
 }

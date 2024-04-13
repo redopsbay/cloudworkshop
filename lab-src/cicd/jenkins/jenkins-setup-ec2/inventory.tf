@@ -7,7 +7,7 @@
 
 resource "local_sensitive_file" "private_key" {
   content         = tls_private_key.tls_key.private_key_pem
-  filename        = format("%s/%s", abspath(path.module), "${var.private_key}")
+  filename        = "${path.module}/${var.private_key}"
   file_permission = "0600"
   depends_on      = [tls_private_key.tls_key]
 }
@@ -20,4 +20,11 @@ data "template_file" "inventory" {
     jenkins_slave_ip  = "${aws_instance.jenkins_slave.public_ip}"
     jenkins_pem       = "${path.module}/${var.private_key}"
   }
+}
+
+resource "local_sensitive_file" "ansible_inventory" {
+  content         = data.template_file.inventory.rendered
+  filename        = local.ansible_inventory_file
+  file_permission = "0755"
+  depends_on      = [tls_private_key.tls_key]
 }
