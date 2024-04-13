@@ -26,7 +26,7 @@ resource "aws_instance" "jenkins_server" {
   instance_type               = "t3.medium"
   associate_public_ip_address = true
   key_name                    = aws_key_pair.jenkins.key_name
-  security_groups             = [aws_security_group.jenkins_server.id]
+  vpc_security_group_ids      = [aws_security_group.jenkins_server.id]
   tags                        = merge({ Name = "Jenkins Server" }, local.resource_tags)
 
   root_block_device {
@@ -44,7 +44,7 @@ resource "aws_instance" "jenkins_slave" {
   instance_type               = "t3.small"
   associate_public_ip_address = true
   key_name                    = aws_key_pair.jenkins.key_name
-  security_groups             = [aws_security_group.jenkins_slave.id]
+  vpc_security_group_ids      = [aws_security_group.jenkins_slave.id]
 
   tags = merge({ Name = "Jenkins Slave" }, local.resource_tags)
 
