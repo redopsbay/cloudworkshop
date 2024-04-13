@@ -34,5 +34,5 @@ terraform apply \
   -var=vpc_id="$vpc_id" \
   -var=vpc_jenkins_slave_subnet_id=$slave_subnet_id \
   -var=vpc_jenkins_server_subnet_id=$server_subnet_id \
-  -out=plan.out \
-  -state=resource.tfstate
+  -state=resource.tfstate \
+  plan.out
