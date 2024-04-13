@@ -11,7 +11,7 @@ resource "null_resource" "ansible" {
   }
 
   provisioner "local-exec" {
-    command     = "ansible-playbook -i ${path.module}/inventory.ini ${path.module}/ansible-playbooks/jenkins.yaml -b -v"
+    command     = "sleep 150s && export ANSIBLE_HOST_KEY_CHECKING=False && ansible-playbook -i ${path.module}/inventory.ini ${path.module}/ansible-playbook/playbook.yaml -b -v"
     interpreter = ["/bin/bash -c "]
   }
   depends_on = [
