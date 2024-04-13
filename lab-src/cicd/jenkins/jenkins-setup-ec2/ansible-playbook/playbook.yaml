@@ -1,0 +1,3 @@
+---
+- name: Setup Jenkins Server and Slave
+  import_playbook: playbooks/jenkins.yaml
