@@ -1,0 +1,88 @@
+---
+- name: Setup Nginx
+  import_playbook: nginx.yaml
+
+- name: Setup "default-jre" and "default-jdk"
+  import_playbook: java.yaml
+
+- hosts: jenkins_server
+  become: yes
+  tasks:
+    - name: Set a hostname
+      ansible.builtin.hostname:
+        name: jenkins-server
+        use: systemd
+      become: yes
+
+    - name: Update repositories cache
+      apt:
+        update_cache: yes
+      become: yes
+
+    - name: Creating "/opt/jenkins" directory
+      ansible.builtin.file:
+        path: /opt/jenkins
+        state: directory
+        mode: '0755'
+      become: yes
+
+    - name: Creating 'jenkins' unix group
+      ansible.builtin.group:
+        name: jenkins
+        state: present
+      become: yes
+
+    - name: Creating user 'jenkins' on 'jenkins' group
+      ansible.builtin.user:
+        name: jenkins
+        comment: Jenkins Server
+        shell: /bin/bash
+        group: jenkins
+      become: yes
+
+    - name: Download jenkins.war
+      ansible.builtin.get_url:
+        url: https://get.jenkins.io/war-stable/2.440.2/jenkins.war
+        dest: /opt/jenkins/jenkins.war
+        mode: '0755'
+        owner: jenkins
+        group: jenkins
+      become: yes
+
+    - name: Upload 'start-jenkins.sh' to '/opt/jenkins/start-jenkins.sh'
+      ansible.builtin.copy:
+        src: templates/start-jenkins.sh
+        dest: /opt/jenkins/start-jenkins.sh
+        owner: jenkins
+        group: jenkins
+        mode: '0755'
+
+    - name: Upload jenkins server systemd service 'jenkins-server.service' to '/etc/systemd/system/jenkins-server.service'
+      ansible.builtin.template:
+        src: templates/jenkins-server.service.j2
+        dest: /etc/systemd/system/jenkins-server.service
+        owner: jenkins
+        group: jenkins
+        mode: '0644'
+      become: yes
+
+    - name: Make sure a service unit is running
+      ansible.builtin.systemd_service:
+        state: started
+        name: jenkins-server
+        daemon_reload: true
+        enabled: true
+      become: yes
+
+    - name: Waiting for jenkins server to get ready
+      ansible.builtin.pause:
+        minutes: 2
+
+    - name: Get jenkins "/home/.jenkins/secrets/initialAdminPassword"
+      ansible.builtin.shell: |
+         cat /home/jenkins/.jenkins/secrets/initialAdminPassword
+      register: jenkins_password
+
+    - name: Generated Jenkins Password
+      debug:
+        msg: "{{jenkins_password.stdout}}"
