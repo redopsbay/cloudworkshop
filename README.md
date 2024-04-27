@@ -1,10 +1,10 @@
-# DevOps Workshop
+# Cloud Workshop
 
-[https://devops.redopsbay.dev](https://devops.redopsbay.dev)
+[https://cloudworkshop.redopsbay.dev](https://cloudworkshop.redopsbay.dev)
 
 Curated list of demo for cloud-native solutions. 👌
 
-Aiming developers or who wants to start their career as a devops engineer or just enthusiast automating things. 😎
+Aiming developers or who wants to start their journey into cloud. 😎
 
 **_Knowledge is free!!! You just have to work for it!_**
 
@@ -45,4 +45,4 @@ make start-nginx
 
 ## Contributors 🚧
 
-[![contributors](https://contrib.rocks/image?repo=redopsbay/devops)](https://github.com/redopsbay/devops/graphs/contributors)
+[![contributors](https://contrib.rocks/image?repo=redopsbay/cloudworkshop)](https://github.com/redopsbay/cloudworkshop/graphs/contributors)

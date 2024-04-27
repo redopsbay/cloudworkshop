@@ -1,15 +1,15 @@
-baseURL = 'https://devops.redopsbay.dev'
+baseURL = 'https://cloudworkshop.redopsbay.dev'
 languageCode = 'en-us'
-title = 'DevOps Workshop'
+title = 'Cloud Workshop'
 theme = 'hugo-theme-learn'
 enableEmoji = true
 
 [params]
-  editURL = "https://github.com/redopsbay/devops/tree/master/content/"
+  editURL = "https://github.com/redopsbay/cloudworkshop/tree/master/content/"
   # Author of the site, will be used in meta information
   author = "Alfred Valderrama"
   # Description of the site, will be used in meta information
-  description = "Basic DevOps automation demonstration"
+  description = "Cloud Workshop aim to help adopt cloud computing"
   titleSeparator = "-"
   showVisitedLinks = true
   disableBreadcrumb = false
@@ -35,7 +35,7 @@ weight = 1
 
 [[menu.shortcuts]]
 name = "<i class='fas fa-chalkboard-teacher'></i> Official GitHub Repository"
-url = "https://github.com/redopsbay/devops"
+url = "https://github.com/redopsbay/cloudworkshop"
 weight = 2
 
 
