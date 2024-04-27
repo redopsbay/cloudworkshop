@@ -1,5 +1,5 @@
 CURRENT_DIR := $(dir $(abspath $(firstword $(MAKEFILE_LIST))))
-HOSTNAME = devops.redopsbay.dev
+HOSTNAME = cloudworkshop.redopsbay.dev
 SHELL=/bin/bash
 
 

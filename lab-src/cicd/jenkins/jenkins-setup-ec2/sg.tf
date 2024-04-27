@@ -7,7 +7,7 @@
 
 
 resource "aws_security_group" "jenkins_server" {
-  name   = "jenkins-server-devops-workshop"
+  name   = "jenkins-server-cloud-workshop"
   vpc_id = local.vpc_id
 
   ingress {
@@ -40,13 +40,13 @@ resource "aws_security_group" "jenkins_server" {
     protocol    = -1
   }
 
-  tags = merge({ Name = "jenkins-server-devops-workshop" }, local.resource_tags)
+  tags = merge({ Name = "jenkins-server-cloud-workshop" }, local.resource_tags)
 
 }
 
 
 resource "aws_security_group" "jenkins_slave" {
-  name   = "jenkins-slave-devops-workshop"
+  name   = "jenkins-slave-cloud-workshop"
   vpc_id = local.vpc_id
 
   ingress {
@@ -63,5 +63,5 @@ resource "aws_security_group" "jenkins_slave" {
     to_port     = 0
   }
 
-  tags = merge({ Name = "jenkins-slave-devops-workshop" }, local.resource_tags)
+  tags = merge({ Name = "jenkins-slave-cloud-workshop" }, local.resource_tags)
 }

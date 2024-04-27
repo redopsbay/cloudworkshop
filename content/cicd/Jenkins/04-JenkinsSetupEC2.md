@@ -31,8 +31,8 @@ Below are the following AWS resources to be created during provisioning process.
 | EBS Root Volume | `50GB` `gp3` for Jenkins Slave                           |
 | Public IP       | Dynamic Public ip address for Jenkins Server             |
 | Public IP       | Dynamic Public ip address for Jenkins Slave              |
-| Security Group  | `jenkins-server-devops-workshop` allow ports `80/443/22` |
-| Security Group  | `jenkins-slave-devops-workshop` allow ports `22`         |
+| Security Group  | `jenkins-server-cloud-workshop` allow ports `80/443/22` |
+| Security Group  | `jenkins-slave-cloud-workshop` allow ports `22`         |
 | Key Pair        | `RSA` Algorithm for SSH connection                       |
 
 
@@ -68,8 +68,8 @@ To start the provisioning process.
 
 ```bash
 ## Clone the repository
-git clone https://github.com/redopsbay/devops.git
-cd devops/lab-src/cicd/jenkins/jenkins-setup-ec2
+git clone https://github.com/redopsbay/cloudworkshop.git
+cd cloudworkshop/lab-src/cicd/jenkins/jenkins-setup-ec2
 ```
 
 5. Make `workshop.sh` as executable file. So, we can execute it.
@@ -175,7 +175,7 @@ Here, After a few minutes, the jenkins initial admin password has been displayed
 
 To avoid such costs. We have to cleanup our AWS resources.
 
-1. Navigate again to your cloudshell and navigate to the `devops/lab-src/cicd/jenkins/jenkins-setup-ec2` directory.
+1. Navigate again to your cloudshell and navigate to the `cloudworkshop/lab-src/cicd/jenkins/jenkins-setup-ec2` directory.
 
 2. Next, run the `workshop.sh` script via:
 
@@ -190,4 +190,4 @@ To avoid such costs. We have to cleanup our AWS resources.
 
 
 ### Reference
-- Lab Resource link: [https://github.com/redopsbay/devops/tree/master/lab-src/cicd/jenkins/jenkins-setup-ec2](https://github.com/redopsbay/devops/tree/master/lab-src/cicd/jenkins/jenkins-setup-ec2)
+- Lab Resource link: [https://github.com/redopsbay/cloudworkshop/tree/master/lab-src/cicd/jenkins/jenkins-setup-ec2](https://github.com/redopsbay/cloudworkshop/tree/master/lab-src/cicd/jenkins/jenkins-setup-ec2)

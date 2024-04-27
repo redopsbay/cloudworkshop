@@ -1,12 +1,10 @@
 ---
-title: "Introduction"
+title: "Introduction to Jenkins"
 chapter: false
 weight: 2
 ---
 
-## Introduction to Jenkins
-
-![DevOps](https://www.jenkins.io/images/logos/actor/256.png)
+![Jenkins](https://www.jenkins.io/images/logos/actor/256.png)
 
 
 

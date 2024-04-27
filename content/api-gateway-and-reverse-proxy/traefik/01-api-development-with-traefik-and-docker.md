@@ -4,7 +4,7 @@ chapter: false
 weight: 2
 ---
 
-![DevOps](https://doc.traefik.io/traefik/assets/img/traefik-architecture.png?width=20pc)
+![Cloud](https://doc.traefik.io/traefik/assets/img/traefik-architecture.png?width=20pc)
 
 ## The Problem 🤯
 
@@ -103,4 +103,4 @@ If you visit the url in my case it's `http://api.redopsbay.dev/user/1` & `http:/
 
 ## Source Code
 
-- [https://github.com/redopsbay/devops/tree/master/lab-src/api-gateway-and-reverse-proxy/traefik/api-development-with-traefik-and-docker](https://github.com/redopsbay/devops/tree/master/lab-src/api-gateway-and-reverse-proxy/traefik/api-development-with-traefik-and-docker)
+- [https://github.com/redopsbay/cloudworkshop/tree/master/lab-src/api-gateway/traefik/api-development-with-traefik-and-docker](https://github.com/redopsbay/cloudworkshop/tree/master/lab-src/api-gateway/traefik/api-development-with-traefik-and-docker)

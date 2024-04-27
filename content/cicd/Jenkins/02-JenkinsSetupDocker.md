@@ -156,4 +156,4 @@ docker-compose up
 
 ### Source Code
 
-- [https://github.com/redopsbay/devops/tree/master/lab-src/cicd/jenkins/jenkins-setup-docker](https://github.com/redopsbay/devops/tree/master/lab-src/cicd/jenkins/jenkins-setup-docker)
+- [https://github.com/redopsbay/cloudworkshop/tree/master/lab-src/cicd/jenkins/jenkins-setup-docker](https://github.com/redopsbay/cloudworkshop/tree/master/lab-src/cicd/jenkins/jenkins-setup-docker)
