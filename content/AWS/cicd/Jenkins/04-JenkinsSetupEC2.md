@@ -68,8 +68,8 @@ To start the provisioning process.
 
 ```bash
 ## Clone the repository
-git clone https://github.com/redopsbay/cloudworkshop.git
-cd cloudworkshop/lab-src/cicd/jenkins/jenkins-setup-ec2
+git clone https://github.com/redopsbay/cloudworkshop-lab-source.git
+cd cloudworkshop-lab-source//AWS/cicd/jenkins/jenkins-setup-ec2
 ```
 
 5. Make `workshop.sh` as executable file. So, we can execute it.
@@ -175,7 +175,7 @@ Here, After a few minutes, the jenkins initial admin password has been displayed
 
 To avoid such costs. We have to cleanup our AWS resources.
 
-1. Navigate again to your cloudshell and navigate to the `cloudworkshop/lab-src/cicd/jenkins/jenkins-setup-ec2` directory.
+1. Navigate again to your cloudshell and navigate to the `cloudworkshop-lab-source/AWS/cicd/jenkins/jenkins-setup-ec2` directory.
 
 2. Next, run the `workshop.sh` script via:
 
@@ -190,4 +190,4 @@ To avoid such costs. We have to cleanup our AWS resources.
 
 
 ### Reference
-- Lab Resource link: [https://github.com/redopsbay/cloudworkshop/tree/master/lab-src/cicd/jenkins/jenkins-setup-ec2](https://github.com/redopsbay/cloudworkshop/tree/master/lab-src/cicd/jenkins/jenkins-setup-ec2)
+- Lab Resource link: [https://github.com/redopsbay/cloudworkshop-lab-source/tree/master/AWS/cicd/jenkins/jenkins-setup-ec2](https://github.com/redopsbay/cloudworkshop-lab-source/tree/master/AWS/cicd/jenkins/jenkins-setup-ec2)

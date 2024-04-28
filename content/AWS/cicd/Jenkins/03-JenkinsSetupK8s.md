@@ -205,4 +205,4 @@ kubectl apply -f *.yaml
 
 ### Source Code
 
-- [https://github.com/redopsbay/cloudworkshop/tree/master/lab-src/cicd/jenkins/jenkins-setup-k8s](https://github.com/redopsbay/cloudworkshop/tree/master/lab-src/cicd/jenkins/jenkins-setup-k8s)
+- [https://github.com/redopsbay/cloudworkshop-lab-source/tree/master/AWS/cicd/jenkins/jenkins-setup-k8s](https://github.com/redopsbay/cloudworkshop-lab-source/tree/master/AWS/cicd/jenkins/jenkins-setup-k8s)
