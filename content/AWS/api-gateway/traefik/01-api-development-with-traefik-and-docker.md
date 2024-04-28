@@ -1,3 +1,24 @@
+---
+title: "API development with traefik & docker"
+chapter: false
+weight: 2
+---
+
+![Cloud](https://doc.traefik.io/traefik/assets/img/traefik-architecture.png?width=20pc)
+
+## The Problem 🤯
+
+You have multiple docker or container services running on a single machine that uses same port during your development, and how will you run all this containers all at once without changing the port numbers?
+
+Of course you can run it through docker using the parameters `-p 8080:8080` and `-p 9090:8080`.
+
+But it's painful everytime you will run it since you will have to change each port on your `localhost`. This is what `traefik` proxy comes in.
+
+### Scenario 😁
+
+For example, you have multiple docker services in your `docker-compose` file running multiple web applications or **api endpoints** and it's both designed to run on port `8080`.
+
+```yaml
 # In my case, I will use my personal domain `redopsbay.dev`. If you don't have one.
 # you can always modify your `/etc/hosts` or `C:\Windows\System32\drivers\etc\hosts` file to add entries like:
 
@@ -53,3 +74,33 @@ services:
       # using `http` entrypoint also that utilizes port `80`
     ports:
       - 8000
+```
+
+If you run and thru `docker-compose up`:
+
+```bash
+docker-compose up
+```
+
+If you visit the url in my case it's `http://api.redopsbay.dev/user/1` & `http://api.redopsbay.dev/product/3`, the response will be:
+
+```bash
+# http://api.redopsbay.dev/user/
+{"id":1,"username":"andres"}
+
+# http://api.redopsbay.dev/product/
+{"id":1,"name":"testproduct"}
+```
+
+**That's it!!! 👌**
+
+***Note:*** Traefik does not tied up only to a api development. It has a lot of feature and use cases like `middleware` and `edge routing` experience and it's pretty fast!!
+{{% children showhidden="false" %}}
+
+### References
+
+- [Traefik Offical Documentation](https://doc.traefik.io/traefik/)
+
+## Source Code
+
+- [https://github.com/redopsbay/cloudworkshop-lab-source/tree/master/AWS/api-gateway/traefik/api-development-with-traefik-and-docker](https://github.com/redopsbay/cloudworkshop-lab-source/tree/master/AWS/api-gateway/traefik/api-development-with-traefik-and-docker)
